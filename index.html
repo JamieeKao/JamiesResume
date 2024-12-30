@@ -3,41 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-   <!-- 嵌入的內部樣式 -->
-    <style>
-    /* 定義通用樣式 */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* 解決固定導覽列遮擋問題 */
-    [id]:before {
-        content: "";
-        display: block;
-        height: 80px; /* 固定導覽列高度 */
-        margin-top: -80px; /* 負值抵消間距 */
-    }
-
-    /* 導覽列樣式 */
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-        z-index: 1000; /* 確保位於頁面最上層 */
-    }
-
-    /* 主要內容的樣式 */
-    main {
-        margin-top: 100px; /* 確保內容不被導覽列覆蓋 */
-    }
-    </style>	
-	
+    <title>My Resume</title>	
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +25,7 @@
     <main>
         <header id="top" class="profile-header">
             <div class="profile-content">
-                <h1>Jamie Kao</h1>
+                <h1>Jamie Kao 高瑋均</h1>
                 <p class="title">Senior System Analyst</p>
                 
                 <!-- 聯絡資訊區塊 -->
@@ -81,15 +47,7 @@
             <div class="profile-image">
                 <img src="static/images/profile-placeholder.jpg" alt="Profile Photo">
             </div>
-            <style>
-                .profile-image img {
-                    width: 300px;
-                    height: 300px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                    border: 3px solid var(--background-color);
-                }
-                </style>
+            
         </header>
 
         <section id="summary">
@@ -107,17 +65,20 @@
                 <!-- 職責部分 -->
                 <h4>Responsibilities</h4>
                 <ul>
-                    <li>Lead technical consulting and implementation for enterprise clients</li>
-                    <li>Manage project lifecycle and stakeholder relationships</li>
-                    <li>Provide technical solutions and architecture design</li>
+                    <li>Lead technical consulting and implementation for enterprise clients.</li>
+                    <li>Generate clear specification documents and communicate business flow to assist engineering team and executive stakeholders in development and delivery.</li>
+                    <li>Proposed and implemented solutions based on business requirements, collaborating with developers to ensure successful outcomes.</li>
                 </ul>
 
                 <!-- 關鍵專案部分 -->
                 <h4>Key Projects</h4>
                 <ul>
-                    <li>Project A: Led system integration for major retail client</li>
-                    <li>Project B: Implemented cloud migration strategy</li>
-                    <li>Project C: Developed custom ERP solutions</li>
+                    <li>Project:Customizing sale system in the online shipping Industry
+                        <ul> 
+                        <li class="circle">Led system integration for major retail client.</li>
+                        <li class="circle">Analyzed key sales processes and generated system analysis documents and table structure design.</li>
+                        <li class="circle">Conducted system testing and troubleshooting.</li>
+                        </ul>
                 </ul>
             </div>
 
@@ -129,15 +90,15 @@
                 <!-- 職責部分 -->
                 <h4>Responsibilities</h4>
                 <ul>
-                    <li>Managed ERP/POS/CRM implementation projects</li>
-                    <li>Conducted system analysis and requirement gathering</li>
-                    <li>Provided technical consultation and support</li>
+                    <li>Managed ERP/POS/CRM implementation projects.</li>
+                    <li>Conducted system analysis and requirement gathering.</li>
+                    <li>Provided technical consultation and support.</li>
                 </ul>
 
                 <!-- 關鍵專案部分 -->
                 <h4>Key Projects</h4>
                 <ul>
-                    <li>Project:Customizing ERP System in the Retail Industry
+                    <li>Project:Customizing ERP System in the drug Industry
                         <ul> 
                         <li class="circle">Designed a Shelving Allocation System to address business challenges through information technology.</li>
                         <li class="circle">Customized ERP systems to support mobile payment solutions based on client requirements.</li>
@@ -145,7 +106,7 @@
                         </ul>
                     </li>
 
-                    <li>Project:Product Classification Project
+                    <li>Project:Consulting product classification in the supermarket industry
                         <ul> 
                         <li class="circle">Analyzed product characteristics and developed classification models to enhance product selection efficiency.</li>
                         <li class="circle">Defined business processes and application rules for consigned products, new products, DM products, and shelving allocation principles.</li>
@@ -180,7 +141,7 @@
             </div>
         </section>
 
-        <section id="technical-Skills">
+        <section id="technical-skills">
             <h2>Technical Skills</h2>
             <ul class="Skill-grid">
                 <li>
@@ -214,8 +175,8 @@
 
         <section id="portfolio">
             <h2>Portfolio</h2>
-            <p>The information is sourced from the digiwin website.</p>
-            <a rel="implementation case" href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.digiwin.com%2Ftw%2Fcase%2F732.html&psig=AOvVaw2j7sIq3PJ8f_YfDC9_Tric&ust=1735117696857000&source=images&cd=vfe&opi=89978449&ved=0CAcQr5oMahcKEwj4-Oigh8CKAxUAAAAAHQAAAAAQBA">Successful System Implementation Case: Client - e-go Bus</a>
+            <p>The following Digiwin website link showcases a successful go-live case that I guided the client through. This implementation case is sourced from the Digiwin website.</p>
+            <a rel="implementation case" href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.digiwin.com%2Ftw%2Fcase%2F732.html&psig=AOvVaw2j7sIq3PJ8f_YfDC9_Tric&ust=1735117696857000&source=images&cd=vfe&opi=89978449&ved=0CAcQr5oMahcKEwj4-Oigh8CKAxUAAAAAHQAAAAAQBA" target="_blank">Successful System Implementation Case: Client - e-go Bus</a>
         </section>
     
         <div>
