@@ -4,6 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
+   <!-- 嵌入的內部樣式 -->
+    <style>
+    /* 定義通用樣式 */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 解決固定導覽列遮擋問題 */
+    [id]:before {
+        content: "";
+        display: block;
+        height: 80px; /* 固定導覽列高度 */
+        margin-top: -80px; /* 負值抵消間距 */
+    }
+
+    /* 導覽列樣式 */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        z-index: 1000; /* 確保位於頁面最上層 */
+    }
+
+    /* 主要內容的樣式 */
+    main {
+        margin-top: 100px; /* 確保內容不被導覽列覆蓋 */
+    }
+    </style>	
+	
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
