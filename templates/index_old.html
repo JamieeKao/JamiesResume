@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#technical-skills">Technical Skills</a></li>
+            <li><a href="#languages">Languages</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="profile-header">
+            <div class="profile-image">
+                <img src="{{ url_for('static', filename='images/profile-placeholder.jpg') }}" alt="Profile Photo">
+            </div>
+            <h1>Your Name</h1>
+            <p class="title">Your Title</p>
+        </header>
+
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Your professional summary goes here.</p>
+        </section>
+
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Job Title</h3>
+                <p class="company">Company Name</p>
+                <p class="date">2020 - Present</p>
+                <ul>
+                    <li>Achievement 1</li>
+                    <li>Achievement 2</li>
+                    <li>Achievement 3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Degree Name</h3>
+                <p class="school">University Name</p>
+                <p class="date">2016 - 2020</p>
+            </div>
+        </section>
+
+        <section id="technical-skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <li>Skill 3</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <ul class="language-list">
+                <li>
+                    <span class="language">Language 1</span>
+                    <span class="proficiency">Proficiency Level</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
