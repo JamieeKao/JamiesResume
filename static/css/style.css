@@ -54,6 +54,8 @@ section {
     padding: 1.2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* 在兩端顯示 logo 和導航項目 */
 }
 
 .navbar ul {
@@ -674,3 +676,41 @@ h2::before {
     justify-content: center;
     align-items: center;
   }
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 0; /* Remove default padding */
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Add some space between items */
+    }
+
+    .flip-container {
+        display: flex;
+        flex-direction: column; /* Stack flip items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .flip-item {
+        width: 100%; /* Make flip items full width */
+        margin-bottom: 20px; /* Add space between items */
+    }
+
+    #timeline {
+        display: block; /* Change timeline to block for mobile */
+        padding: 0; /* Remove padding */
+    }
+
+    #timeline ol {
+        list-style-type: none; /* Remove default list styles */
+        padding: 0; /* Remove padding */
+    }
+
+    #timeline li {
+        margin-bottom: 20px; /* Add space between timeline items */
+    }
+}
