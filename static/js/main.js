@@ -11,12 +11,9 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 document.addEventListener('DOMContentLoaded', () => {
     // 時間軸動畫
-    const timelineItems = document.querySelectorAll('#timeline');
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -10% 0px',
-        threshold: 0.1,
-    };
+    const experienceItems = document.querySelectorAll('.experience-item, .timeline-item');
+    
+
 
     // 滾動觸發動畫功能（使用 handleScroll）
     const handleScroll = () => {
@@ -34,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        timelineItems.forEach(item => {
+        experienceItems.forEach(item => {
             const rect = item.getBoundingClientRect();
             
-            // 檢查時間軸元素是否進入視窗範圍
+            // 檢查元素是否進入視窗範圍
             if (rect.top <= windowHeight * 0.9 && rect.bottom >= 0) {
-                item.classList.add('visible');
+                item.classList.add('experience-visible');
             } else {
-                item.classList.remove('visible');
+                item.classList.remove('experience-visible');
             }
         });
     };

@@ -40,13 +40,14 @@ body {
 
 
 section {
-    scroll-margin-top: 80px; /* 確保滾動至目標區塊時不被遮擋 */
+    scroll-margin-top: 0px; /* 確保滾動至目標區塊時不被遮擋 */
 }
 
 /* Navigation */
 .navbar {
     position: fixed;
-    scroll-padding-top: 80px; /* 導覽列高度 */
+    list-style: none;
+    scroll-padding-top: 100px; /* 導覽列高度 */
     top: 0;
     left: 0;
     width: 100%;
@@ -55,7 +56,8 @@ section {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 1000;
     display: flex;
-    justify-content: space-between; /* 在兩端顯示 logo 和導航項目 */
+    gap: 15px;
+    overflow-x: auto;
 }
 
 .navbar ul {
@@ -81,6 +83,10 @@ section {
     background-color: var(--primary-color);
     color: var(--accent-color);
 }
+
+.navbar::-webkit-scrollbar {
+    display: none;
+  }
 
 /* Main content */
 main {
@@ -153,7 +159,7 @@ main {
 /* Sections */
 section {
     padding: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
     background-color: var(--background-color);
     position: relative;
 }
@@ -182,7 +188,7 @@ h2::before {
 
 /* Experience items */
 .experience-item {
-    padding: 2rem 0;
+    padding: 0rem 0;
     border-bottom: 1px solid #eee;
     margin-top: 50px;
     margin-bottom: 2rem;
@@ -346,148 +352,6 @@ h2::before {
     }
 }
 
-/* 工作經驗區塊樣式 */
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
-
-.container {
-    width: 100%;          /* 確保容器寬度適應畫面 */
-    max-width: 1200px;    /* 設定一個合理的最大寬度 */
-    margin: 0 auto;       /* 置中容器 */
-    padding: 20px;        /* 增加適當的內邊距 */
-    overflow: visible;    /* 確保內容不會被裁剪 */
-    position: relative;   /* 如果需要定位內容，設置 position */
-}
-
-#timeline {
-    animation: none; /*leftIn 1s cubic-bezier(0.2, 0, 0.8, 1) forwards;*/
-    position: relative;
-    width: 100%;
-    height: 3px;
-    background: var(--line-color);
-    margin: 80px auto;    /* 與work experience標題的距離 */
-    overflow: visible;     /* 確保內容可見 */
-    opacity: 0; /* 確保動畫完成後可見 */
-}
-
-/* 進入可見範圍後觸發動畫 */
-#timeline.visible {
-    animation: leftIn 1s cubic-bezier(0.4, 0, 0.6, 1) forwards;
-    opacity: 1; /* 確保動畫完成後可見 */
-    transform: translateY(0); /* 回到初始位置 */
-}
-
-@keyframes leftIn {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-#timeline ol {
-    position: relative !important;
-    display: flex !important;
-    justify-content: space-between; /* 等間距分配 */
-    align-items: center; /* 保證所有項目垂直對齊 */
-    margin: 0px auto;
-    margin-top: 50px !important;
-    margin-bottom: 20px !important;
-    width: 80%; /* 適當的寬度，可調整 */
-    height: 3px !important;
-    padding-inline-start: 0 !important;
-  }  
-  
-  #timeline li {
-    animation: none; /* 初始無動畫 */
-    opacity: 0;
-    transform: translateY(20px);
-    /*transition: all 0.5s ease-out;  是這個動畫由下往上 */
-    font-size: 1.3rem;
-    position: relative;
-    display: flex;
-    flex-direction: column; /* 內容併排顯示 */
-    align-items: center; /* 垂直居中 */
-    justify-content: flex-start; /* 內容從上方開始排列 */
-    width: calc(100% / var(--event-num));
-    height: 1px; /* 節點高度 */
-    background: var(--line-color);
-    color: var(--inactive-font-color);
-
-  }
-
-
-/* 進入可見範圍後觸發動畫 */
-#timeline li.visible {
-    animation: leftIn 1s cubic-bezier(0.4, 0, 0.6, 1) forwards;
-    opacity: 1; /* 確保動畫完成後可見 */
-    transform: translateY(0); /* 回到初始位置 */
-}
- 
-
-  #timeline li .career,
-  #timeline li .timestamp {
-    font-size: 14px;
-    color: var(--secondary-color);
-    text-align: center;
-    margin-top: 15px; /* 調整與圓點的間距 */
-    margin-bottom: -10px; /* 調整與圓點的間距 */
-  }
-
-  #timeline li .career1,
-  #timeline li .timestamp1 {
-    font-size: 14px;
-    color: var(--text-color);
-    text-align: center;
-    margin-top: 15px; /* 調整與圓點的間距 */
-    margin-bottom: -10px; /* 調整與圓點的間距 */
-  }
-  
-  #timeline li .point {
-    animation: pulsePoint 2s ease-in-out 2;
-    content: "";
-    display: block;
-    width: var(--point-size);
-    height: var(--point-size);
-    border-radius: 50%;
-    border: 3px solid var(--point-color);
-    background: #fff;
-    position: absolute;
-    top: calc(-1 * var(--half-point-size));
-    left: calc(50% - var(--half-point-size));
-  }
-
-  #timeline li .point1 {
-    animation: pulsePoint 2s ease-in-out 2;
-    content: "";
-    display: block;
-    width: var(--point-size);
-    height: var(--point-size);
-    border-radius: 50%;
-    background: var(--point-color);
-    position: absolute;
-    top: calc(-1 * var(--half-point-size));
-    left: calc(50% - var(--half-point-size));
-  }
-
-
-  
-  @keyframes pulsePoint {
-    0% {
-        transform: scale(0.8);
-        opacity: 0.6;
-    }
-    50% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0.8);
-        opacity: 0.6;
-    }
-  }
-
-
 
 
 
@@ -542,8 +406,13 @@ h2::before {
 
 
 .flip-container {
+    container-type: inline-size;
+    width: 30vw;
     display: flex;
-    gap: 20px;             /* 兩張牌中間的距離 */
+    gap: 2rem;             /* 兩張牌中間的距離 */
+    margin: 0 !important; /* 移除任何外邊距 */
+    padding: 0 !important; /* 移除任何內邊距 */
+
   }
 
 /* 預設初始不可見 */
@@ -554,17 +423,20 @@ h2::before {
     opacity: 0;
     transform: translateY(20px) rotateY(50deg);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    margin: 0!important; /* 移除任何外邊距 */
+    padding: 0!important; /* 移除任何內邊距 */
   }
 
   /* 滾動至元素時顯示 */
   .flip-item.visible {
     opacity: 1;
     transform: translateY(0) rotateY(0deg);
+    margin: 0!important; /* 移除任何外邊距 */
+    padding: 0!important; /* 移除任何內邊距 */
 }
 
   .label, .suffix {
     font-size: 1.5rem;
-    margin: 0 10px;
     color: #333;
   }
   
@@ -572,16 +444,17 @@ h2::before {
     position: relative;
     top: 20px;            /* 與summary的距離 */
     width: 150px;
-    height: 200px;
+    height: 100px;
     perspective: 1000px;
-    margin-bottom: 0rem;
+    margin: 0!important; /* 移除任何外邊距 */
+    padding: 0!important; /* 移除任何內邊距 */
   }
   
+  /* 最後翻出來的內容 */
   .top, .bottom, .flip {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
+    position: relative;
+    width: 150px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -607,6 +480,7 @@ h2::before {
   .flip {
     transform-origin: bottom;
     animation: flip 0.6s forwards;
+
   }
   
   .flip-top {
@@ -677,40 +551,107 @@ h2::before {
     align-items: center;
   }
 
-@media (max-width: 768px) {
-    .navbar ul {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        padding: 0; /* Remove default padding */
-    }
 
-    .navbar li {
-        margin: 10px 0; /* Add some space between items */
+/* Add this to your existing CSS file */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+/*時間軸的線條*/
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 60px; /* Adjust to position the line */
+    top: 0;
+    bottom: 0;
+    width: 3px; /* Width of the timeline line */
+    background-color: #ccc; /* Color of the timeline line */
+}
+
+.timeline-item {
+    position: relative;
+    margin: 40px 0; /* Increased margin for spacing */
+    padding-left: 100px; /* Space for the year, line, and icon */
+}
+
+.year {
+    animation: FadeIn 1s ease-out forwards;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Varela', 'Noto Sans TC', '微軟正黑體', sans-serif;
+    color: var(--accent-color); /* Adjust color as needed */
+    text-shadow: 4px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Time icon styling紅色時鐘 */
+.timeline-item::before {
+    animation: FadeIn 1s ease-out forwards;
+    content: '\f017';
+    font-family: 'Font Awesome 5 Free'; /* Specify the Font Awesome font */
+    font-weight: 900; /* Use the solid weight */
+    position: absolute;
+    left: 52px; /* Position the icon */
+    top: 1px; /* Adjust vertical position */
+    font-size: 20px; /* Adjust size to match the original dot size */
+    color: var(--accent-color); /* Use your accent color */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.experience-item {
+    animation: FadeIn 1s ease-out forwards;
+    background: #f9f9f9; /* Background color for experience items */
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+    margin: 0;
+    color: var(--inactive-font-color) /* Adjust color as needed */
+}
+
+.experience-item p {
+    margin: 5px 0;
+}
+
+.experience-visible {
+    animation: FadeIn 1s ease-out forwards;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 在手機尺寸下的調整 */
+@media screen and (max-width: 768px) {
+
+
 
     .flip-container {
         display: flex;
         flex-direction: column; /* Stack flip items vertically */
         align-items: center; /* Center items */
+        margin: 0; /* 移除任何外邊距 */
+        padding: 0; /* 移除任何內邊距 */
     }
 
     .flip-item {
         width: 100%; /* Make flip items full width */
-        margin-bottom: 20px; /* Add space between items */
+        margin-bottom: 0px; /* Add space between items */
+        margin: 0; /* 移除任何外邊距 */
+        padding: 0; /* 移除任何內邊距 */
     }
 
-    #timeline {
-        display: block; /* Change timeline to block for mobile */
-        padding: 0; /* Remove padding */
-    }
-
-    #timeline ol {
-        list-style-type: none; /* Remove default list styles */
-        padding: 0; /* Remove padding */
-    }
-
-    #timeline li {
-        margin-bottom: 20px; /* Add space between timeline items */
-    }
 }
