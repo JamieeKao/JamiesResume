@@ -261,6 +261,21 @@ h2::before {
     color: var(--primary-color);
 }
 
+.skill-visible {
+    animation: FadeIn 1s ease-out forwards;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Language list */
 .language-list {
@@ -271,7 +286,7 @@ h2::before {
 
 .language-list li {
     background-color: var(--light-gray);
-    padding: 1rem 2rem;
+    padding: 1rem 2rem; /* 灰底方框 */
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -286,6 +301,21 @@ h2::before {
 .proficiency {
     color: var(--secondary-color);
     font-size: 0.9rem;
+}
+
+.language-visible {
+    animation: FadeIn 1s ease-out forwards;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-info {
@@ -562,11 +592,11 @@ h2::before {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 60px; /* Adjust to position the line */
+    left: 58px; /* Adjust to position the line */
     top: 0;
     bottom: 0;
     width: 3px; /* Width of the timeline line */
-    background-color: #ccc; /* Color of the timeline line */
+    background-color: var(--secondary-color); /* Color of the timeline line */
 }
 
 .timeline-item {

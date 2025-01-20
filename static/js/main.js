@@ -12,8 +12,8 @@ document.querySelectorAll('nav a').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', () => {
     // 時間軸動畫
     const experienceItems = document.querySelectorAll('.experience-item, .timeline-item');
-    
-
+    const skillItems = document.querySelectorAll('.Skill-grid li')
+    const languageItems = document.querySelectorAll('.language-list li')
 
     // 滾動觸發動畫功能（使用 handleScroll）
     const handleScroll = () => {
@@ -41,6 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.classList.remove('experience-visible');
             }
         });
+
+        skillItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            // 檢查元素是否進入視窗範圍
+            if (rect.top <= windowHeight * 0.9 && rect.bottom >= 0) {
+                item.classList.add('skill-visible');
+            } else {
+                item.classList.remove('skill-visible');
+            }
+        });
+
+        languageItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            // 檢查元素是否進入視窗範圍
+            if (rect.top <= windowHeight * 0.9 && rect.bottom >= 0) {
+                item.classList.add('language-visible');
+            } else {
+                item.classList.remove('language-visible');
+            }
+
+         });
     };
 
     // 綁定滾動事件
