@@ -167,7 +167,7 @@ section {
 h2 {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 0.5rem; /* 小標題與下一個元素的間距 */
+    margin-bottom: 1rem; /* 小標題與下一個元素的間距 */
     margin-top: 0rem; /* 消除與前面元素的間距 */
     line-height: 1.2; /* 行高 */
     color: var(--primary-color);
