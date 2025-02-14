@@ -70,3 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // 初始化檢查（確保加載後元素立即顯示）
     handleScroll();
 });
+
+/*處理導覽列問題*/
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      const navbarHeight = document.querySelector(".navbar").offsetHeight;
+  
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - navbarHeight - 10,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+  

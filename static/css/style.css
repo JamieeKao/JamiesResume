@@ -58,22 +58,25 @@ section {
     display: flex;
     gap: 15px;
     overflow-x: auto;
+    text-align:center;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    text-align:center;
     gap: 3rem;
 }
+
 
 .navbar a {
     color: var(--background-color);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem;
     transition: color 0.3s ease;
     text-transform: capitalize;    /* 大寫字 */
+    text-align:center;
     font-size: 0.9rem;
     letter-spacing: 2px;
     font-weight: 400;
